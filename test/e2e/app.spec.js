@@ -1,7 +1,7 @@
-describe("app", function() {
-  it("should get home page title", function() {
+describe('Todos tracker', function() {
+  it('has a toDo', function() {
     browser.get('/');
-    expect(browser.getTitle()).toEqual("Todos App");
+    var todo = $('#todo');
+    expect(todo.getText()).toEqual('ToDo1');
   });
 });
-

@@ -5,6 +5,7 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers/ToDoController.js"></script>
+  <script src="js/factories/ToDoFactory.js"></script
   <title>Todos App</title>
 </head>
 <body>
@@ -12,6 +13,8 @@
     <p ng-repeat="todo in controller.todos">
       {{ todo.text  }}: {{ todo.completed ? "completed" : "not
       completed"  }}
+      
+      <span class="complete" ng-click="todo.complete();">Complete</span>
     </p>
     <input id="new-todo-name" type="text" ng-model="todoText">
     <button id="add-todo" ng-click="controller.addToDo(todoText);">Add a
